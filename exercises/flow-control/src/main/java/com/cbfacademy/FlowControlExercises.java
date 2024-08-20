@@ -9,10 +9,24 @@ public class FlowControlExercises {
     public List<String> fizzBuzz(List<Integer> numbers) {
         // TODO - Implement this method such that
         //  it creates a list where for each element of the input list ${numbers}
+        List<String> result = new ArrayList<>();
+        for (Integer number : numbers) {}
         //  - if the ${element} is divisible by 3, it adds “Fizz” to the list
+            if (number % 3 == 0) {
+                result.add("Fizz");
+            }
         //  - if the ${element} is divisible by 5, it adds “Buzz” to the list
+            else if (number % 5 == 0) {
+                result.add("Buzz");
+            }
         //  - if the ${element} is divisible by both 3 and 5, it adds “FizzBuzz” to the list
+            else if (number % 3 == 0 && number % 5 == 0) {
+                result.add("FizzBuzz");
+            }
         //  - it adds the element to the list in any other case
+            else {
+                result.add(number.toString());
+            }
         //  - it returns the constructed list
         throw new RuntimeException("Not implemented");
     }
