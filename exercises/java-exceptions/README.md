@@ -23,6 +23,7 @@ try {
 
 }
 ```
+// yes
 
 ### Question 2
 
@@ -76,6 +77,8 @@ What happens (choose 1):
 - [ ] an unchecked exception
 - [ ] a compile error
 - [ ] no exception
+
+// an error
 
 ## :pushpin: Custom Exceptions
 
