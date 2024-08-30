@@ -1,7 +1,7 @@
 package com.cbfacademy;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -48,25 +48,22 @@ public class FlowControlExercises {
     }
 
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
-        List<Integer> numbers = new ArrayList<>();
-
-        for(int i = 1; i <= 100; i++) {
-            numbers.add(i);
-        }
         int sumOfEvens = 0;
         int sumOfOdds = 0;
-        for (Integer number : numbers) {
-            if (number % 2 == 0) {
-                sumOfEvens += number;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                sumOfEvens += i;
             } else {
-                sumOfOdds += number;
+                sumOfOdds += i;
             }
         }
+        System.out.println("Sum of Evens: " + sumOfEvens);
+        System.out.println("Sum of Odds: " + sumOfOdds);
         return Map.of("sumOfEvens", sumOfEvens, "sumOfOdds", sumOfOdds);
     }
 
-    public List<Integer> reverse(ArrayList<Integer> numbers) {
-        List<Integer> reversedList = new ArrayList<>();
+    public List<Integer> reverse(List<Integer> numbers) {
+        List<Integer> reversedList = new ArrayList<>(numbers);
         Collections.reverse(reversedList);
         return reversedList;
     }
